@@ -11,8 +11,15 @@
 |
 */
 
+use App\User;
+
 Route::get('/', function () {
-    return view('welcome');
+    return User::create([
+        'id' => 'zxc',
+        'name' => 'Jane',
+        'email' => 'john@jane.com',
+        'password' => bcrypt('password'),
+    ]);
 });
 
 /*
